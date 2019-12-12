@@ -19,7 +19,7 @@ const posts = [
           {
             id: 3,
             title: 'Google Nears $1B Investment in SpaceX',
-            link: null,
+            link: 'https://youtube.com',
             username: 'notme',
             comments: [],
             upvotes: 12,

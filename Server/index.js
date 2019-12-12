@@ -3,6 +3,9 @@ import express from 'express';
 import contactsRouter from './api/contacts';
 import postsRouter from './api/posts';
 import bodyParser from 'body-parser';
+import './db';
+import {loadPosts} from './postsData';
+
 
 dotenv.config();
 
@@ -19,7 +22,7 @@ app.use(bodyParser.urlencoded());
 
 // Populate DB with sample data
 if (process.env.seedDb) {
-  loadContacts();
+ // loadContacts();
   loadPosts();
 }
 
