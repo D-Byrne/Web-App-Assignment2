@@ -4,7 +4,7 @@
   "description": "server side",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node index.js"
+    "start": "nodemon --ignore hackerNews/* --exec babel-node index.js"
   },
   "author": "d-byrne",
   "license": "ISC",
@@ -17,7 +17,12 @@
     "nodemon": "^2.0.1"
   },
   "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.8.0"
   }
 }
