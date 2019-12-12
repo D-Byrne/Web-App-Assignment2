@@ -9,8 +9,9 @@ const CommentSchema = new Schema({
 
  const PostSchema = new Schema({
    title: {type: String, required: true},
+   year: {type: Number, optional: true},
    link: {type: String, optional: true},
-   username: {type: String, required: true},
+   author: {type: String, required: true},
    comments: [CommentSchema],
    upvotes: {type: Number, min: 0, max: 100, default: 0},
  });
