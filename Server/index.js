@@ -13,18 +13,16 @@ const app = express();
 
 const port = process.env.PORT;
 
-
-app.use(express.static('public'));
+// Populate DB with sample data
+if (process.env.seedDb) {
+  // loadContacts();
+   loadPosts();
+}
 
 //configure body-parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 
-// Populate DB with sample data
-if (process.env.seedDb) {
- // loadContacts();
-  loadPosts();
-}
 
 app.use('/api/posts', postsRouter);
 app.use('/api/contacts', contactsRouter);
